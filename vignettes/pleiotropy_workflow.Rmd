@@ -1,0 +1,76 @@
+---
+title: "Reproducible Workflow for Exploring Pleiotropic Associations in GWAS Summary Statistics"
+author: "Christina Y. Feng, Pierre Emmanuel Sugier, Nan Zou, and Benoit Liquet"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+---
+
+### Overview
+
+This vignette provides a reproducible workflow accompanying the tutorial,
+*A Guide for Exploring Pleiotropic Associations in Genome-Wide Association Studies using Summary Statistics*.
+
+The workflow uses summary statistics from breast cancer and thyroid cancer
+examples. No individual-level data are provided.
+
+### Required packages
+
+```{r setup, message=FALSE, warning=FALSE}
+source("../R/00_setup.R")
+```
+
+### Load and prepare summary statistics
+
+```{r prepare-data}
+source("../R/01_prepare_data.R")
+```
+
+### ASSET analysis
+
+```{r asset}
+source("../R/02_asset.R")
+```
+
+### PLACO analysis
+
+```{r placo}
+source("../R/03_placo.R")
+```
+
+### GPA analysis
+
+```{r gpa}
+source("../R/04_gpa.R")
+```
+
+### CPBayes analysis
+
+```{r cpbayes}
+source("../R/05_cpbayes.R")
+```
+
+### GCPBayes gene-level analysis
+
+```{r gcpbayes}
+source("../R/06_gcpbayes.R")
+```
+
+### Summary of outputs
+
+The workflow saves method-specific results in the `results/` folder:
+
+- `prepared_summary_statistics.rds`
+- `asset_results.rds`
+- `placo_results.rds`
+- `gpa_results.rds`
+- `cpbayes_results.rds`
+- `gcpbayes_results.rds`
+
+### Session information
+
+```{r session-info}
+sessionInfo()
+```

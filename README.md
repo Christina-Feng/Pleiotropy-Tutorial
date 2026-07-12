@@ -12,60 +12,37 @@ No individual-level data are provided.
 
 ---
 
-## Repository Structure
-
-```text
-Pleiotropy-Tutorial/
-├── README.md
-├── Pleiotropy-Tutorial.Rproj
-├── data/
-│   ├── GWAS_sumstats.RData
-│   └── BCAT1_sumstats.RData
-├── R/
-│   ├── 00_setup.R
-│   ├── 01_prepare_data.R
-│   ├── 02_asset.R
-│   ├── 03_placo.R
-│   ├── 04_gpa.R
-│   ├── 05_cpbayes.R
-│   ├── 06_gcpbayes.R
-│   └── 07_run_all.R
-├── vignettes/
-│   └── pleiotropy_workflow.Rmd
-└── results/
-    └── .gitkeep
-```
-
----
-
 ## Reproducible Workflow
 
-To improve transparency and ease of use, the example analyses have been organized into a sequential, end-to-end workflow:
+To improve transparency and usability, the example analyses have been organised into a sequential, end-to-end workflow. 
 
-1. **`00_setup.R`**: Loads required libraries, verifies package installations, and configures folders.
-2. **`01_prepare_data.R`**: Imports raw GWAS summary statistics and formats inputs into a unified structured file.
-3. **`02_asset.R`**: Applies the subset-based meta-analysis method ASSET.
-4. **`03_placo.R`**: Conducts composite null testing with PLACO.
-5. **`04_gpa.R`**: Runs GPA for pleiotropy-informed and annotation-informed prioritisation.
-6. **`05_cpbayes.R`**: Executes the Bayesian cross-phenotype model CPBayes.
-7. **`06_gcpbayes.R`**: Applies the Bayesian group-level model GCPBayes to gene-level summary statistics.
-8. **`07_run_all.R`**: Companion script that runs the entire analysis pipeline in sequence.
+> [!NOTE]
+> You can go through this tutorial in two ways:
+> - **Run the R scripts directly:** Fork or download the repository, open `Pleiotropy-Tutorial.Rproj` and run the raw `.R` scripts from the `R/` directory.
+> - **Follow the step-by-step Markdown files:** Browse the detailed walkthroughs, code explanations, and method descriptions in the Markdown files linked below or located in the `vignettes/` directory.
+
+Each step is documented in a dedicated Markdown file:
+
+1. [**`00_setup.md`**](vignettes/00_setup.md): Loads required libraries, verifies package installations, and configures folders.
+2. [**`01_prepare_data.md`**](vignettes/01_prepare_data.md): Imports raw GWAS summary statistics and formats inputs into a unified structured file.
+3. [**`02_asset.md`**](vignettes/02_asset.md): Applies the subset-based meta-analysis method ASSET.
+4. [**`03_placo.md`**](vignettes/03_placo.md): Conducts composite null testing with PLACO.
+5. [**`04_gpa.md`**](vignettes/04_gpa.md): Runs GPA for pleiotropy-informed and annotation-informed prioritisation.
+6. [**`05_cpbayes.md`**](vignettes/05_cpbayes.md): Executes the Bayesian cross-phenotype model CPBayes.
+7. [**`06_gcpbayes.md`**](vignettes/06_gcpbayes.md): Applies the Bayesian group-level model GCPBayes to gene-level summary statistics.
+8. [**`07_run_all.md`**](vignettes/07_run_all.md): Describes how to run the complete analysis pipeline in sequence using `R/07_run_all.R`.
 
 ### Running the Workflow
 
-To run the full workflow in one step from the root directory of the repository, use:
+To run the full workflow in one step and compile a complete HTML report from the root directory of the repository, use:
 
 ```r
 source("R/07_run_all.R")
 ```
 
-Alternatively, follow the step-by-step annotated vignette and compile it to an HTML report using:
+This will automatically render the R Markdown report into the `results/` directory as `pleiotropy_workflow.html`. If the `rmarkdown` package is not installed, it will fall back to executing the individual R scripts sequentially.
 
-```r
-rmarkdown::render("vignettes/pleiotropy_workflow.Rmd")
-```
-
-All output results will be saved as `.rds` files inside the `results/` folder.
+Each step can be followed individually in its respective Markdown file listed above. All output results are saved as `.rds` files inside the `results/` folder.
 
 ---
 
@@ -83,6 +60,8 @@ The workflow uses the following R packages:
 * `GPA`
 * `CPBayes`
 * `GCPBayes`
+* `rmarkdown`
+* `knitr`
 
 Most packages can be installed from CRAN or Bioconductor. The PLACO functions are sourced directly from the authors' GitHub repository using `devtools::source_url()` within the PLACO analysis script.
 
@@ -97,7 +76,9 @@ install.packages(c(
   "MASS",
   "devtools",
   "CPBayes",
-  "GCPBayes"
+  "GCPBayes",
+  "rmarkdown",
+  "knitr"
 ))
 ```
 

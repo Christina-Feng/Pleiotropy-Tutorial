@@ -19,9 +19,9 @@ CorZ <- cor.pearson(Z.matrix, P.matrix, p.threshold=1e-4)
 cat("--- Z-score Correlation (CorZ) ---\n")
 print(CorZ)
 
-# Step 02 Use 'placo' function if CorZ is less than than 0.5, 
+# Step 02 Use 'placo' function if CorZ is less than 0.5, 
 #         indicating uncorrelated traits.
-# For correlated traits (CorZ greater than equal to 0.5), 
+# For correlated traits (CorZ greater than or equal to 0.5), 
 #         use 'placo.plus' in Step 2 instead.
 
 # Step 1 Estimate the variance parameters

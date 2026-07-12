@@ -10,12 +10,25 @@
 
 rm(list = ls())
 
+# Load setup first to check directories and packages
 source("R/00_setup.R")
-source("R/01_prepare_data.R")
-source("R/02_asset.R")
-source("R/03_placo.R")
-source("R/04_gpa.R")
-source("R/05_cpbayes.R")
-source("R/06_gcpbayes.R")
 
-cat("Workflow completed successfully.\n")
+if (requireNamespace("rmarkdown", quietly = TRUE)) {
+  cat("Rendering the workflow R Markdown report...\n")
+  rmarkdown::render(
+    input = "vignettes/pleiotropy_workflow.Rmd",
+    output_dir = "results",
+    output_file = "pleiotropy_workflow.html",
+    quiet = FALSE
+  )
+  cat("Workflow completed successfully. HTML report saved to results/pleiotropy_workflow.html\n")
+} else {
+  cat("rmarkdown package not found. Running the workflow sequentially...\n")
+  source("R/01_prepare_data.R")
+  source("R/02_asset.R")
+  source("R/03_placo.R")
+  source("R/04_gpa.R")
+  source("R/05_cpbayes.R")
+  source("R/06_gcpbayes.R")
+  cat("Workflow completed successfully.\n")
+}

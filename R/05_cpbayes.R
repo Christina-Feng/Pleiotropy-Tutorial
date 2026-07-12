@@ -27,7 +27,7 @@ cat("--- Analytic locFDR and log10_BF ---\n")
 print(result)
 
 # Step 3: Implement CPBayes for unrelated traits 
-# Burin 500 samples, and draw 5500 posterior samples 
+# Burn-in 500 samples, and draw 5500 posterior samples 
 result_CP <- cpbayes_uncor(Beta_Hat, SE, 
                            Phenotypes = Traits, Variant = SNP, 
                            MCMCiter = 5500, Burnin = 500)

@@ -399,12 +399,22 @@ summary statistics</h3>
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-<pre><code>## Data preparation complete. Saved to results/prepared_summary_statistics.rds</code></pre>
+<pre><code>## --- First 3 rows of Aligned Estimates (beta_hat) ---
+##             [,1]        [,2]
+## [1,] -0.15333205 -0.12903026
+## [2,]  0.02767578 -0.01080159
+## [3,] -0.01792820  0.04093252
+## --- First 3 rows of Aligned Z-scores (z_matrix) ---
+##          Breast    Thyroid
+## [1,] -2.1443557 -1.8252670
+## [2,]  0.4716861 -0.1825597
+## [3,] -0.2580843  0.5987953
+## Data preparation complete. Saved to results/prepared_summary_statistics.rds</code></pre>
 </div>
 <div id="asset-analysis" class="section level3" number="4">
 <h3><span class="header-section-number">4</span> ASSET analysis</h3>
 <pre class="r"><code>source(&quot;../R/02_asset.R&quot;)</code></pre>
-<pre><code>## here() starts at /Users/christinafeng/Desktop/Pleiotropy-Tutorial</code></pre>
+<pre><code>## here() starts at /Users/christinafeng/Desktop/Pleiotropy-Tutorial-Private-main</code></pre>
 <pre><code>## --- Meta Summary ---
 ##          SNP      Pvalue    OR CI.low CI.high
 ## 1  rs7531583 0.005022145 0.868  0.864   0.873

@@ -45,4 +45,10 @@ saveRDS(
   here::here("results", "prepared_summary_statistics.rds")
 )
 
+# Print a preview of the structured matrices for the audience
+cat("--- First 3 rows of Aligned Estimates (beta_hat) ---\n")
+print(head(beta_hat, 3))
+cat("--- First 3 rows of Aligned Z-scores (z_matrix) ---\n")
+print(head(z_matrix, 3))
+
 cat("Data preparation complete. Saved to results/prepared_summary_statistics.rds\n")

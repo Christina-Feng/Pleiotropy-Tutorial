@@ -10,11 +10,13 @@ required_packages <- c(
   "ASSET",
   "GPA",
   "CPBayes",
-  "GCPBayes"
+  "GCPBayes",
+  "rmarkdown",
+  "knitr"
 )
 
-# Note: Bioconductor and Github packages should be installed manually.
-# For PLACO, it is sourced directly from Github, so no package load is needed.
+# Note: Bioconductor and GitHub packages should be installed manually.
+# For PLACO, it is sourced directly from GitHub, so no package load is needed.
 for (pkg in required_packages) {
   if (!requireNamespace(pkg, quietly = TRUE)) {
     message("Package not installed: ", pkg)

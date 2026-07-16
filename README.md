@@ -12,6 +12,15 @@ No individual-level data are provided.
 
 ---
 
+## Repository Structure
+
+* [**`R/`**](R/): Raw R scripts for each step of the tutorial.
+* [**`data/`**](data/): Input datasets and variable descriptions.
+* [**`results/`**](results/): Intermediate outputs and the final HTML report.
+* [**`vignettes/`**](vignettes/): Step-by-step markdown walkthroughs.
+
+---
+
 ## Reproducible Workflow
 
 To improve transparency and usability, the example analyses have been organised into a sequential, end-to-end workflow. 
@@ -23,26 +32,24 @@ To improve transparency and usability, the example analyses have been organised 
 
 Each step is documented in a dedicated Markdown file:
 
-1. [**`00_setup.md`**](vignettes/00_setup.md): Loads required libraries, verifies package installations, and configures folders.
-2. [**`01_prepare_data.md`**](vignettes/01_prepare_data.md): Imports raw GWAS summary statistics and formats inputs into a unified structured file.
-3. [**`02_asset.md`**](vignettes/02_asset.md): Applies the subset-based meta-analysis method ASSET.
-4. [**`03_placo.md`**](vignettes/03_placo.md): Conducts composite null testing with PLACO.
-5. [**`04_gpa.md`**](vignettes/04_gpa.md): Runs GPA for pleiotropy-informed and annotation-informed prioritisation.
-6. [**`05_cpbayes.md`**](vignettes/05_cpbayes.md): Executes the Bayesian cross-phenotype model CPBayes.
-7. [**`06_gcpbayes.md`**](vignettes/06_gcpbayes.md): Applies the Bayesian group-level model GCPBayes to gene-level summary statistics.
-8. [**`07_run_all.md`**](vignettes/07_run_all.md): Describes how to run the complete analysis pipeline in sequence using `R/07_run_all.R`.
+1. [**`00_setup.md`**](vignettes/00_setup.md): Environment setup and package verification.
+2. [**`01_prepare_data.md`**](vignettes/01_prepare_data.md): Summary statistics loading and alignment.
+3. [**`02_asset.md`**](vignettes/02_asset.md): Subset-based meta-analysis using `ASSET`.
+4. [**`03_placo.md`**](vignettes/03_placo.md): Composite null hypothesis testing using `PLACO`.
+5. [**`04_gpa.md`**](vignettes/04_gpa.md): Genetic Pleiotropy Analysis with annotations using `GPA`.
+6. [**`05_cpbayes.md`**](vignettes/05_cpbayes.md): SNP-level Bayesian cross-phenotype analysis using `CPBayes`.
+7. [**`06_gcpbayes.md`**](vignettes/06_gcpbayes.md): Gene-level Bayesian cross-phenotype analysis using `GCPBayes` on the *BCAT1* gene.
+8. [**`07_run_all.md`**](vignettes/07_run_all.md): Executing the sequential pipeline and compiling results.
 
 ### Running the Workflow
 
-To run the full workflow in one step and compile a complete HTML report from the root directory of the repository, use:
+Individual walkthroughs are documented in the `vignettes/` directory, and output files are saved as `.rds` files in `results/`.
+
+Alternatively, to run the full pipeline and compile the HTML report, execute:
 
 ```r
 source("R/07_run_all.R")
 ```
-
-This will automatically render the R Markdown report into the `results/` directory as `pleiotropy_workflow.html`. If the `rmarkdown` package is not installed, it will fall back to executing the individual R scripts sequentially.
-
-Each step can be followed individually in its respective Markdown file listed above. All output results are saved as `.rds` files inside the `results/` folder.
 
 ---
 

@@ -16,7 +16,7 @@ Loading this file (`load("data/GWAS_sumstats.RData")`) loads the following objec
   * `p.value`: p-value.
   * `chr`, `pos`, `minor`, `major`, `gene`, `pathway`: Genomic coordinates, alleles, and pathway annotations.
 * **`T_sumstats`**: A dataframe with thyroid cancer summary statistics (same structure as `B_sumstats`).
-* **`annot`**: A dataframe with annotations for the 3,707 SNPs.
+* **`annot`**: A dataframe with genes and biological pathway annotations for the 3,707 SNPs.
 * **`N11`**: Case sample sizes (Breast: 1,125; Thyroid: 1,129).
 * **`N00`**: Control sample sizes (Breast: 1,172; Thyroid: 1,174).
 

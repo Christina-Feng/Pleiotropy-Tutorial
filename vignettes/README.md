@@ -4,14 +4,14 @@ This folder contains the step-by-step markdown walkthroughs and the primary R Ma
 
 ## Tutorial Walkthroughs
 
-* [**`00_setup.md`**](vignettes/00_setup.md): Environment setup and package verification.
-* [**`01_prepare_data.md`**](vignettes/01_prepare_data.md): Summary statistics loading and alignment.
-* [**`02_asset.md`**](vignettes/02_asset.md): Subset-based meta-analysis using`ASSET` package.
-* [**`03_placo.md`**](vignettes/03_placo.md): Composite null hypothesis testing using `PLACO`.
-* [**`04_gpa.md`**](vignettes/04_gpa.md): Genetic Pleiotropy Analysis with annotations using `GPA`.
-* [**`05_cpbayes.md`**](vignettes/05_cpbayes.md): SNP-level Bayesian cross-phenotype analysis using `CPBayes`.
-* [**`06_gcpbayes.md`**](vignettes/06_gcpbayes.md): Gene-level Bayesian cross-phenotype analysis using `GCPBayes` on the *BCAT1* gene.
-* [**`07_run_all.md`**](vignettes/07_run_all.md): Executing the sequential pipeline and compiling results.
+* [**`00_setup.md`**](00_setup.md): Environment setup and package verification.
+* [**`01_prepare_data.md`**](01_prepare_data.md): Summary statistics loading and alignment.
+* [**`02_asset.md`**](02_asset.md): Subset-based meta-analysis using`ASSET` package.
+* [**`03_placo.md`**](03_placo.md): Composite null hypothesis testing using `PLACO`.
+* [**`04_gpa.md`**](04_gpa.md): Genetic Pleiotropy Analysis with annotations using `GPA`.
+* [**`05_cpbayes.md`**](05_cpbayes.md): SNP-level Bayesian cross-phenotype analysis using `CPBayes`.
+* [**`06_gcpbayes.md`**](06_gcpbayes.md): Gene-level Bayesian cross-phenotype analysis using `GCPBayes` on the *BCAT1* gene.
+* [**`07_run_all.md`**](07_run_all.md): Executing the sequential pipeline and compiling results.
 
 ---
 

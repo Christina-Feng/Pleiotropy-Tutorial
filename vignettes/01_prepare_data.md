@@ -5,7 +5,7 @@ This script loads the raw GWAS summary statistics, aligns and extracts the relev
 ## Step-by-Step Analysis & Results
 
 ### 1. Load Libraries and Import Summary Statistics
-First, load the `tidyverse` library and import the raw summary statistics:
+First, load the `tidyverse` library and import the raw summary statistics from the [data folder](../data):
 
 ```R
 library(tidyverse)

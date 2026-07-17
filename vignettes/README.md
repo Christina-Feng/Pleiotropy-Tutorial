@@ -17,4 +17,4 @@ This folder contains the step-by-step markdown walkthroughs and the primary R Ma
 
 ## R Markdown Template
 
-* [**`pleiotropy_workflow.Rmd`**]](pleiotropy_workflow.Rmd): The master R Markdown document that imports scripts from the `R/` folder to compile steps 01–06 into a single HTML report (`results/pleiotropy_workflow.html`).
+* [**`pleiotropy_workflow.Rmd`**](pleiotropy_workflow.Rmd): The master R Markdown document that imports scripts from the `R/` folder to compile steps 01–06 into a single HTML report (`results/pleiotropy_workflow.html`).
